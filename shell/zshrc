@@ -1,0 +1,10 @@
+export PS1="%~ %F{blue}HOSTNAME $%f "
+
+alias http='python3 -m http.server 8000'
+
+export HISTSIZE=1000000                  
+export HISTFILESIZE=100000
+setopt sharehistory
+setopt extendedhistory
+setopt INC_APPEND_HISTORY
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
