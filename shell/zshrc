@@ -10,3 +10,6 @@ setopt INC_APPEND_HISTORY
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 alias history="history 1"
 
+bindkey -e
+bindkey '^R' history-incremental-search-backward
+
