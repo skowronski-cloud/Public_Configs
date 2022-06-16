@@ -13,3 +13,4 @@ alias history="history 1"
 bindkey -e
 bindkey '^R' history-incremental-search-backward
 
+alias clock='tty-clock -sc -f "%a, %d %b %Y %T %z"'
