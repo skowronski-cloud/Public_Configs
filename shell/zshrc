@@ -1,6 +1,6 @@
 alias clock='tty-clock -sc -f "%a, %d %b %Y %T %z"'
 alias http='python3 -m http.server 8000'
-
+ 
 export HISTSIZE=1000000
 export HISTFILESIZE=100000
 setopt sharehistory
@@ -8,14 +8,14 @@ setopt extendedhistory
 setopt INC_APPEND_HISTORY
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 alias history="history 1"
-
+ 
 bindkey -e
 bindkey '^R' history-incremental-search-backward
-
+ 
 alias clock='tty-clock -sc -f "%a, %d %b %Y %T %z"'
-
+ 
 export PATH=$PATH:/System/Volumes/Data/opt/homebrew/bin/
-
+ 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 CASE_SENSITIVE="true"
@@ -23,7 +23,7 @@ HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true" #???
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true" #???
-
+ 
 plugins=(
   git
   dotenv
@@ -50,12 +50,14 @@ plugins=(
   zsh-autosuggestions 
   zsh-syntax-highlighting
 )
-
+ 
 source $ZSH/oh-my-zsh.sh
-
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ 
 export LANG=en_US.UTF-8
-
-# system tools to install
-# brew install zsh-autosuggestions zsh-syntax-highlighting
+ 
+# __ system tools to install
+# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+# brew install zsh-syntax-highlighting fzf tty-clock
 
